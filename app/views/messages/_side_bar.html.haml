@@ -1,10 +1,10 @@
 .side-bar
   .side-bar__user-name
     .top-icon
-      masa
+      = current_user.name
       = link_to "#", class: "fas fa-cog" do
         = icon('fab', 'fa-cog')
-      = link_to "#", class: "far fa-edit" do
+      = link_to "edit_user_path(current_user", class: "far fa-edit" do
         = icon('far', 'fa-edit')
 
   .side-bar__group-list
