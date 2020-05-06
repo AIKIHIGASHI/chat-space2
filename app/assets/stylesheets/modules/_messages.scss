@@ -1,6 +1,7 @@
 @import "modules/mixin";
 * {
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 .wrapper{
@@ -38,12 +39,14 @@
     padding: 0 20px;
   }
   .name {
-font-size: 15px;
-padding-top: 20px;
+  padding-top: 20px;
+  @include side-font();
+  font-size: 15px;
   }
   .message {
-    font-size: 11px;
     padding: 5px 0 40px;
+    @include side-font();
+    font-size: 11px;
   }
 }
 
