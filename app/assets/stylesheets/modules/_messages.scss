@@ -83,9 +83,7 @@
     background-color: #fafafa;
     height: calc(100% - 190px);
     padding: 0 40px;
-    div {
-      padding-bottom: 35px;
-    }
+
     .block {
       font-size: 16px;
       font-weight: bold;
@@ -95,6 +93,7 @@
     }
     span {
       @include main-font();
+      padding-left: 10px;
       font-weight: normal;
       position: absolute;
       top: 0px;
@@ -106,36 +105,39 @@
       margin-bottom: 46px;
     }
   }
-  &__message-form{
-    background-color: #d2d2d2;
+  .form{
+    background-color: #dddddd;
+    box-sizing: border-box;
     height: 90px;
-    padding: 0 40px;
-    display: flex;
-    align-items: center;
-    position: relative;
-    .login-input-text{
+    padding: 20px 50px 20px 40px;
+    &__message {
+      border: none;
+      float: left;
       height: 50px;
-      width: calc(100% - 100px);
-      border-style: none;
-      margin-right: 15px;
+      width: calc(100% - 150px);
     }
-    .input-box{
-      display: none;
-    }
-    .input-box__image {
-      position: absolute;
-      font-size: 25px;
-      top: 28px;
-      right: 165px;
-      cursor: pointer;
-    }
-    .send {
+    &__mask {
+      background-color: $white;
+      float: left;
       height: 50px;
-      width: 100px;
-      background-color: #38aef0;
-      text-align: center;
-      line-height: 50px;
-      color: white;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+      }
+      .hidden {
+        display: none;
+      }
+    }
+    &__submit {
+      background-color: $light_blue;
+      border: none;
+      color: $white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
     }
   }
 }
